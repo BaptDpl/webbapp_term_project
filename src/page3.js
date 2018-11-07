@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
+import Text from "./text";
+import Image from "./image";
 
 class Page3 extends Component {
   handle = (e, data) => {
-    console.log(data);
+    console.log(this.props);
     this.props.history.push("/page4");
   };
 
@@ -11,48 +13,38 @@ class Page3 extends Component {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">
-          <img
+          <Image
             alt="football"
-            icon=""
             src="football.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "football")}
+            nextPage="/page4"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="soccer"
-            icon=""
             src="soccer.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "soccer")}
+            nextPage="/page4"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="basketball"
-            icon=""
             src="basketball.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "basketball")}
+            nextPage="/page4"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="baseball"
-            icon=""
             src="baseball.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "baseball")}
+            nextPage="/page4"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="puck"
-            icon=""
             src="puck.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "puck")}
+            nextPage="/page4"
+            history={this.props.history}
           />
         </div>
-        <h1 className="mt-5">
-          <span className="text-info ">Choose </span>
-          <span className="text-primary ">Your </span>
-          <span className="text-danger ">Favorite </span>
-          <span className="text-warning ">Sport! </span>
-        </h1>
+        <Text text={"Sport!"} />
       </div>
     );
   }

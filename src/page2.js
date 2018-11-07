@@ -1,58 +1,45 @@
 import React, { Component } from "react";
 import "./App.css";
+import Text from "./text";
+import Image from "./image";
 
 class Page2 extends Component {
-  handle = (e, data) => {
-    console.log(data);
-    this.props.history.push("/page3");
-  };
-
   render() {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">
-          <img
+          <Image
             alt="orange"
-            icon=""
             src="orange.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "orange")}
+            nextPage="/page3"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="doughnut"
-            icon=""
             src="doughnut.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "doughnut")}
+            nextPage="/page3"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="fish"
-            icon=""
             src="fish.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "green")}
+            nextPage="/page3"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="steak"
-            icon=""
             src="steak.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "fish")}
+            nextPage="/page3"
+            history={this.props.history}
           />
-          <img
+          <Image
             alt="pint"
-            icon=""
             src="pint.png"
-            className="mb-3 mx-auto d-block"
-            onClick={e => this.handle(e, "pint")}
+            nextPage="/page3"
+            history={this.props.history}
           />
         </div>
-        <h1 className="mt-5">
-          <span className="text-info ">Choose </span>
-          <span className="text-primary ">Your </span>
-          <span className="text-danger ">Favorite </span>
-          <span className="text-warning ">Food! </span>
-        </h1>
+        <Text text={"Food!"} />
       </div>
     );
   }

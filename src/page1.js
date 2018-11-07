@@ -1,44 +1,51 @@
 import React, { Component } from "react";
 import "./App.css";
+import Text from "./text";
+import Image from "./image";
 
 class Page1 extends Component {
-  handle = (e, data) => {
-    console.log(data);
-    this.props.history.push("/page2");
-  };
-
   render() {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">
-          <p
-            className="bg-success mr-3"
-            onClick={e => this.handle(e, "green")}
+          <Image
+            alt="blue"
+            src="blue.png"
+            currPage="color"
+            nextPage="/page2"
+            history={this.props.history}
           />
-          <p
-            className="bg-primary ml-3 mr-3"
-            onClick={e => this.handle(e, "blue")}
+          <Image
+            alt="green"
+            src="green.png"
+            currPage="color"
+            nextPage="/page2"
+            history={this.props.history}
           />
-          <p
-            className="bg-danger ml-3 mr-3"
-            onClick={e => this.handle(e, "red")}
+          <Image
+            alt="pink"
+            src="pink.png"
+            currPage="color"
+            nextPage="/page2"
+            history={this.props.history}
           />
-          <p
-            className="bg-warning ml-3 mr-3"
-            onClick={e => this.handle(e, "yellow")}
+          <Image
+            alt="red"
+            src="red.png"
+            currPage="color"
+            nextPage="/page2"
+            history={this.props.history}
           />
-          <p
-            className="bg-white ml-3 mr-3"
-            onClick={e => this.handle(e, "white")}
+          <Image
+            alt="yellow"
+            src="yellow.png"
+            currPage="color"
+            nextPage="/page2"
+            history={this.props.history}
           />
         </div>
 
-        <h1 className="mt-5">
-          <span className="text-info ">Choose </span>
-          <span className="text-primary ">Your </span>
-          <span className="text-danger ">Favorite </span>
-          <span className="text-warning ">Color! </span>
-        </h1>
+        <Text text={"Color!"} />
       </div>
     );
   }
