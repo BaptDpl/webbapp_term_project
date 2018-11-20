@@ -13,21 +13,19 @@ class Image extends Component {
     this.handle = this.handle.bind(this);
   }
   handle = (e, data, currPage, nextPage) => {
-    if ((currPage = "color")) {
-      this.setState({ color: data });
+    if (currPage === "color") {
+      this.setState({ color: data }, () => console.log(this.state));
     }
-    if ((currPage = "food")) {
-      this.setState({ food: data });
+    if (currPage === "food") {
+      this.setState({ food: data }, () => console.log(this.state));
     }
-    if ((currPage = "sport")) {
-      this.setState({ sport: data });
+    if (currPage === "sport") {
+      this.setState({ sport: data }, () => console.log(this.state));
     }
-    console.log(this.state);
-    this.props.history.push(nextPage);
+    //this.props.history.push(nextPage);
   };
 
   render() {
-    console.log(this.state);
     return (
       <img
         alt={this.props.alt}

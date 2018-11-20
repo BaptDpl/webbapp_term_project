@@ -3,50 +3,50 @@ import "./App.css";
 import Text from "./text";
 import Image from "./image";
 
-class Page3 extends Component {
-  handle = (e, data) => {
-    console.log(this.props);
-    this.props.history.push("/page4");
-  };
-
+class Food extends Component {
   render() {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">
           <Image
-            alt="football"
-            src="football.png"
-            nextPage="/page4"
+            alt="orange"
+            src="orange.png"
+            currPage="Food"
+            nextPage="/Sport"
             history={this.props.history}
           />
           <Image
-            alt="soccer"
-            src="soccer.png"
-            nextPage="/page4"
+            alt="doughnut"
+            src="doughnut.png"
+            currPage="Food"
+            nextPage="/Sport"
             history={this.props.history}
           />
           <Image
-            alt="basketball"
-            src="basketball.png"
-            nextPage="/page4"
+            alt="fish"
+            src="fish.png"
+            currPage="Food"
+            nextPage="/Sport"
             history={this.props.history}
           />
           <Image
-            alt="baseball"
-            src="baseball.png"
-            nextPage="/page4"
+            alt="steak"
+            src="steak.png"
+            currPage="Food"
+            nextPage="/Sport"
             history={this.props.history}
           />
           <Image
-            alt="puck"
-            src="puck.png"
-            nextPage="/page4"
+            alt="pint"
+            src="pint.png"
+            currPage="food"
+            nextPage="/Sport"
             history={this.props.history}
           />
         </div>
-        <Text text={"Sport!"} />
+        <Text text={"Food!"} />
       </div>
     );
   }
 }
-export default Page3;
+export default Food;

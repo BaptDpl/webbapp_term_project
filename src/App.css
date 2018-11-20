@@ -26,13 +26,12 @@ body,
   background: -webkit-linear-gradient(to right, #414345, #232526);
   background: linear-gradient(to right, #414345, #232526);
 }
-img,
-p {
+img {
   background-color: transparent;
-  -moz-transition: all 3s ease-in-out;
-  -webkit-transition: all 3s ease-in-out;
-  transition: all 3s ease-in-out;
-  animation: blink normal 3s infinite ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  animation: blink normal 1.5s infinite ease-in-out;
 }
 
 img[icon] {

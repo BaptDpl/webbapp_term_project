@@ -3,7 +3,7 @@ import "./App.css";
 import Text from "./text";
 import Image from "./image";
 
-class Page1 extends Component {
+class Color extends Component {
   render() {
     return (
       <div className="">
@@ -12,35 +12,35 @@ class Page1 extends Component {
             alt="blue"
             src="blue.png"
             currPage="color"
-            nextPage="/page2"
+            nextPage="/Food"
             history={this.props.history}
           />
           <Image
             alt="green"
             src="green.png"
             currPage="color"
-            nextPage="/page2"
+            nextPage="/Food"
             history={this.props.history}
           />
           <Image
             alt="pink"
             src="pink.png"
             currPage="color"
-            nextPage="/page2"
+            nextPage="/Food"
             history={this.props.history}
           />
           <Image
             alt="red"
             src="red.png"
             currPage="color"
-            nextPage="/page2"
+            nextPage="/Food"
             history={this.props.history}
           />
           <Image
             alt="yellow"
             src="yellow.png"
             currPage="color"
-            nextPage="/page2"
+            nextPage="/Food"
             history={this.props.history}
           />
         </div>
@@ -50,4 +50,4 @@ class Page1 extends Component {
     );
   }
 }
-export default Page1;
+export default Color;
