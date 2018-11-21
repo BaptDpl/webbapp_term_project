@@ -4,12 +4,14 @@ import Text from "./text";
 import Image from "./image";
 
 class Sport extends Component {
-  handle = (e, data) => {
-    console.log(this.props);
-    this.props.history.push("/page4");
+  state = {
+    color: "",
+    food: "",
+    sport: ""
   };
 
   render() {
+    //console.log(this.props.history);
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">

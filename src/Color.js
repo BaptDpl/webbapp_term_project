@@ -4,7 +4,14 @@ import Text from "./text";
 import Image from "./image";
 
 class Color extends Component {
+  state = {
+    color: "",
+    food: "",
+    sport: ""
+  };
+
   render() {
+    //console.log(this.props.history);
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">

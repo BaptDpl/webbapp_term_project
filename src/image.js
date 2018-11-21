@@ -2,27 +2,44 @@ import React, { Component } from "react";
 import "./App.css";
 
 class Image extends Component {
-  state = {
-    color: "",
-    food: "",
-    sport: ""
-  };
-
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
   }
   handle = (e, data, currPage, nextPage) => {
     if (currPage === "color") {
-      this.setState({ color: data }, () => console.log(this.state));
+      console.log(this.props.history);
+      //this.props.history.push(nextPage, { color: data });
+      this.props.history.push({
+        pathname: nextPage,
+        state: { color: data }
+      });
     }
     if (currPage === "food") {
-      this.setState({ food: data }, () => console.log(this.state));
+      //this.props.history.push(nextPage, { food: data });
+      console.log(this.props.history);
+      let color = this.props.history.location.state.color;
+      this.props.history.push({
+        pathname: nextPage,
+        state: {
+          color: color,
+          food: data
+        }
+      });
     }
     if (currPage === "sport") {
-      this.setState({ sport: data }, () => console.log(this.state));
+      console.log(this.props.history);
+      let color = this.props.history.location.state.color;
+      let food = this.props.history.location.state.food;
+      this.props.history.push({
+        pathname: nextPage,
+        state: {
+          color: color,
+          food: food,
+          sport: data
+        }
+      });
     }
-    //this.props.history.push(nextPage);
   };
 
   render() {
