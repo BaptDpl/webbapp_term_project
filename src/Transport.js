@@ -3,56 +3,55 @@ import "./App.css";
 import Text from "./text";
 import Image from "./image";
 
-class Sport extends Component {
+class Transport extends Component {
   render() {
-    //console.log(this.props.history);
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">
           <Image
-            alt="football"
+            alt="plane"
             value={1}
-            src="football.png"
-            currPage="sport"
-            nextPage="/Emotion"
+            src="plane.png"
+            currPage="transport"
+            nextPage="/Total"
             history={this.props.history}
           />
           <Image
-            alt="soccer"
+            alt="boat"
             value={2}
-            src="soccer.png"
-            currPage="sport"
-            nextPage="/Emotion"
+            src="boat.png"
+            currPage="transport"
+            nextPage="/Total"
             history={this.props.history}
           />
           <Image
-            alt="basketball"
+            alt="train"
             value={3}
-            src="basketball.png"
-            currPage="sport"
-            nextPage="/Emotion"
+            src="train.png"
+            currPage="transport"
+            nextPage="/Total"
             history={this.props.history}
           />
           <Image
-            alt="baseball"
+            alt="car"
             value={4}
-            src="baseball.png"
-            currPage="sport"
-            nextPage="/Emotion"
+            src="car.png"
+            currPage="transport"
+            nextPage="/Total"
             history={this.props.history}
           />
           <Image
-            alt="puck"
+            alt="bike"
             value={5}
-            src="puck.png"
-            currPage="sport"
-            nextPage="/Emotion"
+            src="bike.png"
+            currPage="transport"
+            nextPage="/Total"
             history={this.props.history}
           />
         </div>
-        <Text text3={"Favourite "} text4={"Sport!"} />
+        <Text text3={"Favorite "} text4={"Transport!"} />
       </div>
     );
   }
 }
-export default Sport;
+export default Transport;
