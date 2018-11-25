@@ -8,7 +8,12 @@ class App extends Component {
     return (
       <div className="">
         <NavLink to="/Color">
-          <img alt="totem" src="totem.png" className="mb-5 mx-auto d-block" />
+          <img
+            icon="title"
+            alt="totem"
+            src="totem.png"
+            className="mb-5 mx-auto d-block"
+          />
         </NavLink>
         <h1 className="mt-5">
           <span className="text-info title">Find </span>

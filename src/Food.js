@@ -4,12 +4,6 @@ import Text from "./text";
 import Image from "./image";
 
 class Food extends Component {
-  state = {
-    color: "",
-    food: "",
-    sport: ""
-  };
-
   render() {
     //console.log(this.props.history);
     return (
@@ -17,6 +11,7 @@ class Food extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <Image
             alt="orange"
+            value={1}
             src="orange.png"
             currPage="food"
             nextPage="/Sport"
@@ -24,6 +19,7 @@ class Food extends Component {
           />
           <Image
             alt="doughnut"
+            value={2}
             src="doughnut.png"
             currPage="food"
             nextPage="/Sport"
@@ -31,6 +27,7 @@ class Food extends Component {
           />
           <Image
             alt="fish"
+            value={3}
             src="fish.png"
             currPage="food"
             nextPage="/Sport"
@@ -38,6 +35,7 @@ class Food extends Component {
           />
           <Image
             alt="steak"
+            value={4}
             src="steak.png"
             currPage="food"
             nextPage="/Sport"
@@ -45,13 +43,14 @@ class Food extends Component {
           />
           <Image
             alt="pint"
+            value={5}
             src="pint.png"
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
           />
         </div>
-        <Text text={"Food!"} />
+        <Text text3={"Favourite "} text4={"Food!"} />
       </div>
     );
   }

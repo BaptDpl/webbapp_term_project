@@ -6,37 +6,65 @@ class Image extends Component {
     super(props);
     this.handle = this.handle.bind(this);
   }
-  handle = (e, data, currPage, nextPage) => {
+
+  handle = (e, data, value, currPage, nextPage) => {
     if (currPage === "color") {
-      console.log(this.props.history);
-      //this.props.history.push(nextPage, { color: data });
-      this.props.history.push({
-        pathname: nextPage,
-        state: { color: data }
-      });
-    }
-    if (currPage === "food") {
-      //this.props.history.push(nextPage, { food: data });
-      console.log(this.props.history);
-      let color = this.props.history.location.state.color;
+      console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
         state: {
-          color: color,
-          food: data
+          color: data,
+          value: value
+        }
+      });
+    }
+    if (currPage === "food") {
+      console.log(this.props.history.location.state);
+      this.props.history.push({
+        pathname: nextPage,
+        state: {
+          color: this.props.history.location.state.color,
+          food: data,
+          value: this.props.history.location.state.value + value
         }
       });
     }
     if (currPage === "sport") {
-      console.log(this.props.history);
-      let color = this.props.history.location.state.color;
-      let food = this.props.history.location.state.food;
+      console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
         state: {
-          color: color,
-          food: food,
-          sport: data
+          color: this.props.history.location.state.color,
+          food: this.props.history.location.state.food,
+          sport: data,
+          value: this.props.history.location.state.value + value
+        }
+      });
+    }
+    if (currPage === "emotion") {
+      console.log(this.props.history.location.state);
+      this.props.history.push({
+        pathname: nextPage,
+        state: {
+          color: this.props.history.location.state.color,
+          food: this.props.history.location.state.food,
+          sport: this.props.history.location.state.sport,
+          emotion: data,
+          value: this.props.history.location.state.value + value
+        }
+      });
+    }
+    if (currPage === "transport") {
+      console.log(this.props.history.location.state);
+      this.props.history.push({
+        pathname: nextPage,
+        state: {
+          color: this.props.history.location.state.color,
+          food: this.props.history.location.state.food,
+          sport: this.props.history.location.state.sport,
+          emotion: this.props.history.location.state.emotion,
+          transport: data,
+          value: this.props.history.location.state.value + value
         }
       });
     }
@@ -46,13 +74,15 @@ class Image extends Component {
     return (
       <img
         alt={this.props.alt}
-        icon=""
+        icon={this.props.icon || "choices"}
         src={this.props.src}
-        className="mb-3 mx-auto d-block"
+        value={this.props.value}
+        className={this.props.class || "mb-3 mx-auto d-block"}
         onClick={e =>
           this.handle(
             e,
             this.props.alt,
+            this.props.value,
             this.props.currPage,
             this.props.nextPage
           )
