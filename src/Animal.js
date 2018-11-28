@@ -105,6 +105,13 @@ class Animal extends Component {
             </a>
             Artist Credit:{" "}
             <span className="text-primary">{this.state.photographer}</span>
+            <a
+              className="ml-5"
+              href="https://github.com/BaptDpl/webbapp_term_project"
+            >
+              {" "}
+              Git repository
+            </a>
           </div>
         </footer>
       </div>
