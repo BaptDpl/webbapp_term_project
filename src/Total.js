@@ -17,7 +17,16 @@ class Total extends Component {
     };
   }
 
-  render() {
+  componentWillMount = () => {
+    if (this.props.history.location.state === undefined) {
+      this.props.history.push({
+        pathname: "/ErrorPage"
+      });
+      return;
+    }
+  };
+
+  componentDidMount = () => {
     setTimeout(() => {
       this.setState({ text: "mt-5 animation" });
     }, 1000);
@@ -44,7 +53,9 @@ class Total extends Component {
         }
       });
     }, 8000);
+  };
 
+  render() {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">

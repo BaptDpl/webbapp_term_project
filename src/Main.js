@@ -9,6 +9,7 @@ import Emotion from "./Emotion";
 import Transport from "./Transport";
 import Total from "./Total";
 import Animal from "./Animal";
+import ErrorPage from "./ErrorPage";
 
 class Main extends Component {
   render() {
@@ -23,6 +24,7 @@ class Main extends Component {
           <Route path="/Transport" component={Transport} />
           <Route path="/Total" component={Total} />
           <Route path="/Animal" component={Animal} />
+          <Route path="/ErrorPage" component={ErrorPage} />
         </div>
       </BrowserRouter>
     );

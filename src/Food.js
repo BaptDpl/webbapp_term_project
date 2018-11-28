@@ -5,7 +5,6 @@ import Image from "./image";
 
 class Food extends Component {
   render() {
-    //console.log(this.props.history);
     return (
       <div className="">
         <div className="d-flex justify-content-center align-items-center">

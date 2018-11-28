@@ -30,6 +30,32 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 h1 {
   font-family: "Kumar One outline", cursive !important;
   font-weight: bold;
@@ -74,6 +100,36 @@ img[icon="animation"],
 
 img:hover {
   transform: scale(1.25);
+}
+
+img[icon="animal"],
+.animal {
+  width: 350px;
+  height: 350px;
+  border-radius: 25px;
+}
+
+.invisible {
+  display: none;
+}
+
+.easeIn {
+  background-color: transparent;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+img[icon="spin"],
+.spin {
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 p {

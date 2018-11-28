@@ -5,9 +5,15 @@ class Image extends Component {
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
+    this.state = { error: null };
   }
 
   handle = (e, data, value, currPage, nextPage) => {
+    if (currPage === "error") {
+      this.props.history.push({
+        pathname: nextPage
+      });
+    }
     if (currPage === "color") {
       console.log(this.props.history.location.state);
       this.props.history.push({
@@ -19,6 +25,12 @@ class Image extends Component {
       });
     }
     if (currPage === "food") {
+      if (this.props.history.location.state === undefined) {
+        this.props.history.push({
+          pathname: "/ErrorPage"
+        });
+        return;
+      }
       console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
@@ -30,6 +42,12 @@ class Image extends Component {
       });
     }
     if (currPage === "sport") {
+      if (this.props.history.location.state === undefined) {
+        this.props.history.push({
+          pathname: "/ErrorPage"
+        });
+        return;
+      }
       console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
@@ -42,6 +60,12 @@ class Image extends Component {
       });
     }
     if (currPage === "emotion") {
+      if (this.props.history.location.state === undefined) {
+        this.props.history.push({
+          pathname: "/ErrorPage"
+        });
+        return;
+      }
       console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
@@ -55,6 +79,12 @@ class Image extends Component {
       });
     }
     if (currPage === "transport") {
+      if (this.props.history.location.state === undefined) {
+        this.props.history.push({
+          pathname: "/ErrorPage"
+        });
+        return;
+      }
       console.log(this.props.history.location.state);
       this.props.history.push({
         pathname: nextPage,
@@ -91,4 +121,5 @@ class Image extends Component {
     );
   }
 }
+
 export default Image;
