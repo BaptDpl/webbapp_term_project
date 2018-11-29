@@ -15,6 +15,7 @@ class Food extends Component {
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
+            animal="herbivore"
           />
           <Image
             alt="doughnut"
@@ -23,6 +24,7 @@ class Food extends Component {
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
+            animal="bird"
           />
           <Image
             alt="fish"
@@ -31,6 +33,7 @@ class Food extends Component {
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
+            animal="reptile"
           />
           <Image
             alt="steak"
@@ -39,6 +42,7 @@ class Food extends Component {
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
+            animal="feline"
           />
           <Image
             alt="pint"
@@ -47,6 +51,7 @@ class Food extends Component {
             currPage="food"
             nextPage="/Sport"
             history={this.props.history}
+            animal="fish"
           />
         </div>
         <Text text3={"Favourite "} text4={"Food!"} />

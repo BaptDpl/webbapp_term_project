@@ -15,6 +15,7 @@ class Emotion extends Component {
             currPage="emotion"
             nextPage="/Transport"
             history={this.props.history}
+            animal="herbivore"
           />
           <Image
             alt="happy"
@@ -23,6 +24,7 @@ class Emotion extends Component {
             currPage="emotion"
             nextPage="/Transport"
             history={this.props.history}
+            animal="bird"
           />
           <Image
             alt="confused"
@@ -31,6 +33,7 @@ class Emotion extends Component {
             currPage="emotion"
             nextPage="/Transport"
             history={this.props.history}
+            animal="reptile"
           />
           <Image
             alt="sad"
@@ -39,6 +42,7 @@ class Emotion extends Component {
             currPage="emotion"
             nextPage="/Transport"
             history={this.props.history}
+            animal="fish"
           />
           <Image
             alt="mad"
@@ -47,6 +51,7 @@ class Emotion extends Component {
             currPage="emotion"
             nextPage="/Transport"
             history={this.props.history}
+            animal="feline"
           />
         </div>
         <Text text3={"Current "} text4={"Emotion!"} />

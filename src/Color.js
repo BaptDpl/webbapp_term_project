@@ -16,6 +16,7 @@ class Color extends Component {
             currPage="color"
             nextPage="/Food"
             history={this.props.history}
+            animal="fish"
           />
           <Image
             alt="green"
@@ -24,6 +25,7 @@ class Color extends Component {
             currPage="color"
             nextPage="/Food"
             history={this.props.history}
+            animal="herbivore"
           />
           <Image
             alt="pink"
@@ -32,6 +34,7 @@ class Color extends Component {
             currPage="color"
             nextPage="/Food"
             history={this.props.history}
+            animal="bird"
           />
           <Image
             alt="red"
@@ -40,6 +43,7 @@ class Color extends Component {
             currPage="color"
             nextPage="/Food"
             history={this.props.history}
+            animal="feline"
           />
           <Image
             alt="yellow"
@@ -48,6 +52,7 @@ class Color extends Component {
             currPage="color"
             nextPage="/Food"
             history={this.props.history}
+            animal="reptile"
           />
         </div>
 

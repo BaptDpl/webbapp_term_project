@@ -15,6 +15,7 @@ class Transport extends Component {
             currPage="transport"
             nextPage="/Total"
             history={this.props.history}
+            animal="bird"
           />
           <Image
             alt="boat"
@@ -23,6 +24,7 @@ class Transport extends Component {
             currPage="transport"
             nextPage="/Total"
             history={this.props.history}
+            animal="fish"
           />
           <Image
             alt="train"
@@ -31,6 +33,7 @@ class Transport extends Component {
             currPage="transport"
             nextPage="/Total"
             history={this.props.history}
+            animal="feline"
           />
           <Image
             alt="car"
@@ -39,6 +42,7 @@ class Transport extends Component {
             currPage="transport"
             nextPage="/Total"
             history={this.props.history}
+            animal="reptile"
           />
           <Image
             alt="bike"
@@ -47,6 +51,7 @@ class Transport extends Component {
             currPage="transport"
             nextPage="/Total"
             history={this.props.history}
+            animal="herbivore"
           />
         </div>
         <Text text3={"Favorite "} text4={"Transport!"} />

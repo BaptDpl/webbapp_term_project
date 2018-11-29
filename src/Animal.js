@@ -24,10 +24,51 @@ class Animal extends Component {
       });
       return;
     }
-    console.log(this.props.history.location.state.value);
-    let url = `https://api.pexels.com/v1/search?query=animal+query&per_page=1&page=${
-      this.props.history.location.state.value
-    }`;
+
+    let animalCount = this.props.history.location.state.animalCount;
+    console.log(animalCount);
+    let fish = 0;
+    let feline = 0;
+    let herbivore = 0;
+    let bird = 0;
+    let reptile = 0;
+
+    for (var i = 0; i < animalCount.length; i++) {
+      if (animalCount[i] === "fish") {
+        fish += 1;
+      }
+      if (animalCount[i] === "feline") {
+        feline += 1;
+      }
+      if (animalCount[i] === "herbivore") {
+        herbivore += 1;
+      }
+      if (animalCount[i] === "bird") {
+        bird += 1;
+      }
+      if (animalCount[i] === "reptile") {
+        reptile += 1;
+      }
+    }
+
+    let animalJson = [
+      { count: fish, animal: "fish" },
+      { count: feline, animal: "feline" },
+      { count: herbivore, animal: "herbivore" },
+      { count: bird, animal: "bird" },
+      { count: reptile, animal: "reptile" }
+    ];
+
+    console.log(animalJson);
+    animalJson.sort((a, b) => a.count - b.count);
+
+    let finalAnimal = animalJson[4].animal;
+    let finalValue = this.props.history.location.state.value;
+
+    console.log(finalValue);
+    console.log(finalAnimal);
+
+    let url = `https://api.pexels.com/v1/search?query=${finalAnimal}+query&per_page=1&page=${finalValue}`;
 
     var request = new Request(url, {
       method: "GET",

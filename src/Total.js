@@ -49,7 +49,8 @@ class Total extends Component {
       this.props.history.push({
         pathname: "/Animal",
         state: {
-          value: this.props.history.location.state.value
+          value: this.props.history.location.state.value,
+          animalCount: [...this.props.history.location.state.animalCount]
         }
       });
     }, 8000);

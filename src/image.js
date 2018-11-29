@@ -8,7 +8,7 @@ class Image extends Component {
     this.state = { error: null };
   }
 
-  handle = (e, data, value, currPage, nextPage) => {
+  handle = (e, data, value, currPage, nextPage, animal) => {
     if (currPage === "error") {
       this.props.history.push({
         pathname: nextPage
@@ -20,7 +20,8 @@ class Image extends Component {
         pathname: nextPage,
         state: {
           color: data,
-          value: value
+          value: value,
+          animalCount: [animal]
         }
       });
     }
@@ -37,7 +38,11 @@ class Image extends Component {
         state: {
           color: this.props.history.location.state.color,
           food: data,
-          value: this.props.history.location.state.value + value
+          value: this.props.history.location.state.value + value,
+          animalCount: [
+            ...this.props.history.location.state.animalCount,
+            animal
+          ]
         }
       });
     }
@@ -55,7 +60,11 @@ class Image extends Component {
           color: this.props.history.location.state.color,
           food: this.props.history.location.state.food,
           sport: data,
-          value: this.props.history.location.state.value + value
+          value: this.props.history.location.state.value + value,
+          animalCount: [
+            ...this.props.history.location.state.animalCount,
+            animal
+          ]
         }
       });
     }
@@ -74,7 +83,11 @@ class Image extends Component {
           food: this.props.history.location.state.food,
           sport: this.props.history.location.state.sport,
           emotion: data,
-          value: this.props.history.location.state.value + value
+          value: this.props.history.location.state.value + value,
+          animalCount: [
+            ...this.props.history.location.state.animalCount,
+            animal
+          ]
         }
       });
     }
@@ -94,7 +107,11 @@ class Image extends Component {
           sport: this.props.history.location.state.sport,
           emotion: this.props.history.location.state.emotion,
           transport: data,
-          value: this.props.history.location.state.value + value
+          value: this.props.history.location.state.value + value,
+          animalCount: [
+            ...this.props.history.location.state.animalCount,
+            animal
+          ]
         }
       });
     }
@@ -114,7 +131,8 @@ class Image extends Component {
             this.props.alt,
             this.props.value,
             this.props.currPage,
-            this.props.nextPage
+            this.props.nextPage,
+            this.props.animal
           )
         }
       />

@@ -16,6 +16,7 @@ class Sport extends Component {
             currPage="sport"
             nextPage="/Emotion"
             history={this.props.history}
+            animal="feline"
           />
           <Image
             alt="soccer"
@@ -24,6 +25,7 @@ class Sport extends Component {
             currPage="sport"
             nextPage="/Emotion"
             history={this.props.history}
+            animal="herbivore"
           />
           <Image
             alt="basketball"
@@ -32,6 +34,7 @@ class Sport extends Component {
             currPage="sport"
             nextPage="/Emotion"
             history={this.props.history}
+            animal="bird"
           />
           <Image
             alt="baseball"
@@ -40,6 +43,7 @@ class Sport extends Component {
             currPage="sport"
             nextPage="/Emotion"
             history={this.props.history}
+            animal="reptile"
           />
           <Image
             alt="puck"
@@ -48,6 +52,7 @@ class Sport extends Component {
             currPage="sport"
             nextPage="/Emotion"
             history={this.props.history}
+            animal="fish"
           />
         </div>
         <Text text3={"Favourite "} text4={"Sport!"} />
