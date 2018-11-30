@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To find out what your animal totem is, click on the images :)
+
 First of all, you need to install the node modules as they are not included. Please run:
 
 ### `npm install`
@@ -46,5 +48,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# webbapp_term_project
 
+# webbapp_term_project
