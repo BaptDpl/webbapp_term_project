@@ -49,7 +49,6 @@ class Total extends Component {
       this.props.history.push({
         pathname: "/Animal",
         state: {
-          value: this.props.history.location.state.value,
           animalCount: [...this.props.history.location.state.animalCount]
         }
       });
@@ -62,7 +61,6 @@ class Total extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <Image
             alt={`${this.props.history.location.state.color}`}
-            value={1}
             icon={this.state.first}
             src={`${this.props.history.location.state.color}.png`}
             currPage="total"
@@ -71,7 +69,6 @@ class Total extends Component {
           />
           <Image
             alt={`${this.props.history.location.state.food}`}
-            value={2}
             icon={this.state.sec}
             src={`${this.props.history.location.state.food}.png`}
             currPage="total"
@@ -80,7 +77,6 @@ class Total extends Component {
           />
           <Image
             alt={`${this.props.history.location.state.sport}`}
-            value={3}
             icon={this.state.third}
             src={`${this.props.history.location.state.sport}.png`}
             currPage="total"
@@ -89,7 +85,6 @@ class Total extends Component {
           />
           <Image
             alt={`${this.props.history.location.state.emotion}`}
-            value={4}
             icon={this.state.fourth}
             src={`${this.props.history.location.state.emotion}.png`}
             currPage="total"
@@ -98,7 +93,6 @@ class Total extends Component {
           />
           <Image
             alt={`${this.props.history.location.state.transport}`}
-            value={5}
             icon={this.state.fifth}
             src={`${this.props.history.location.state.transport}.png`}
             currPage="total"

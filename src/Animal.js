@@ -63,12 +63,12 @@ class Animal extends Component {
     animalJson.sort((a, b) => a.count - b.count);
 
     let finalAnimal = animalJson[4].animal;
-    let finalValue = this.props.history.location.state.value;
+    let randomNumber = Math.floor(Math.random() * 50);
 
-    console.log(finalValue);
+    console.log(randomNumber);
     console.log(finalAnimal);
 
-    let url = `https://api.pexels.com/v1/search?query=${finalAnimal}+query&per_page=1&page=${finalValue}`;
+    let url = `https://api.pexels.com/v1/search?query=${finalAnimal}+query&per_page=1&page=${randomNumber}`;
 
     var request = new Request(url, {
       method: "GET",
@@ -120,7 +120,6 @@ class Animal extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <Image
             alt="animal"
-            value={5}
             class={this.state.className}
             src={this.state.animal}
             icon={this.state.icon}

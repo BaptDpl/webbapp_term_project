@@ -11,7 +11,6 @@ class ErrorPage extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <Image
             alt="error"
-            value={5}
             icon="spin"
             class="spin"
             src="error.png"

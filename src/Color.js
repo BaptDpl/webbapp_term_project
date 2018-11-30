@@ -11,7 +11,6 @@ class Color extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <Image
             alt="blue"
-            value={1}
             src="blue.png"
             currPage="color"
             nextPage="/Food"
@@ -20,7 +19,6 @@ class Color extends Component {
           />
           <Image
             alt="green"
-            value={2}
             src="green.png"
             currPage="color"
             nextPage="/Food"
@@ -29,7 +27,6 @@ class Color extends Component {
           />
           <Image
             alt="pink"
-            value={3}
             src="pink.png"
             currPage="color"
             nextPage="/Food"
@@ -38,7 +35,6 @@ class Color extends Component {
           />
           <Image
             alt="red"
-            value={4}
             src="red.png"
             currPage="color"
             nextPage="/Food"
@@ -47,7 +43,6 @@ class Color extends Component {
           />
           <Image
             alt="yellow"
-            value={5}
             src="yellow.png"
             currPage="color"
             nextPage="/Food"
